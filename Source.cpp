@@ -2,8 +2,6 @@
 
 #include <windows.h>
 
-TCHAR szClassName[] = TEXT("Window");
-
 BOOL GetProductNameFromRegistry(LPWSTR lpszProductName, INT nStringLength)
 {
 	BOOL bSuccess = FALSE;
@@ -64,6 +62,7 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT msg, WPARAM wParam, LPARAM lParam)
 
 int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPreInst, LPSTR pCmdLine, int nCmdShow)
 {
+	TCHAR szClassName[] = TEXT("Window");
 	MSG msg;
 	WNDCLASS wndclass = {
 		CS_HREDRAW | CS_VREDRAW,
